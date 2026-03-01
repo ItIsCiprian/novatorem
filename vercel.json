@@ -1,5 +1,8 @@
 {
-  "rewrites": [
-    { "source": "/api/spotify", "destination": "/api/spotify.py" }
+  "builds": [
+    { "src": "api/spotify.py", "use": "@vercel/python" }
+  ],
+  "routes": [
+    { "src": "/api/spotify", "dest": "api/spotify.py" }
   ]
 }
